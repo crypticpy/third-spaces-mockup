@@ -21,7 +21,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--color-bg);
   color: var(--color-text);
-  min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +32,7 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: #ffffff;
 }
 
