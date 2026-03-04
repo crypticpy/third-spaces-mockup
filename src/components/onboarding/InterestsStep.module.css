@@ -1,0 +1,102 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  max-width: 340px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: #ffffff;
+  border: 2px solid var(--chip-color, var(--color-card-border));
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: var(--tap-target-min);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.chip:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.chip:active {
+  transform: scale(0.96);
+}
+
+.chip.selected {
+  background: var(--chip-color, var(--coa-blue));
+  border-color: var(--chip-color, var(--coa-blue));
+  color: #ffffff;
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 3px rgba(68, 73, 156, 0.15);
+  transform: scale(1.05);
+  font-weight: var(--font-weight-bold);
+}
+
+.chip.selected:hover {
+  transform: scale(1.07);
+}
+
+.chip.selected:active {
+  transform: scale(1.0);
+}
+
+/* Checkmark indicator on selected chips */
+.chip.selected::after {
+  content: "\2713";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-radius: 50%;
+  margin-left: 2px;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+.label {
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}

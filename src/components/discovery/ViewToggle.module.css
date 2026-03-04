@@ -1,0 +1,40 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap-target-min);
+  padding: 0 20px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--coa-dark-gray);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab:hover {
+  color: var(--coa-blue);
+}
+
+.tab.active {
+  background: var(--coa-blue);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}

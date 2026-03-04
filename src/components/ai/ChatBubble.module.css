@@ -1,0 +1,113 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  animation: fadeSlideIn 0.25s ease;
+}
+
+.userRow {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.assistantRow {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.bubble {
+  padding: var(--space-md);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.userBubble {
+  background: var(--coa-light-blue);
+  color: var(--coa-dark-blue);
+  border-radius: var(--radius-lg) var(--radius-sm) var(--radius-lg) var(--radius-lg);
+}
+
+.assistantBubble {
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-sm) var(--radius-lg) var(--radius-lg) var(--radius-lg);
+}
+
+.text {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: var(--coa-light-gray);
+  margin-top: 2px;
+  padding: 0 var(--space-xs);
+}
+
+/* ---- Mini place cards ---- */
+.placeCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.miniCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--coa-faded-white);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+  border: 1px solid var(--color-card-border);
+}
+
+.miniCard:hover {
+  background: #eef0fb;
+}
+
+.miniCard:active {
+  transform: scale(0.98);
+}
+
+.miniCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miniCardName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--coa-dark-blue);
+}
+
+.miniCardCost {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.miniCardPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

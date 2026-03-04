@@ -1,0 +1,210 @@
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+.notFound button {
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--coa-dark-blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-card-border);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.backBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--coa-faded-white);
+  color: var(--coa-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.backBtn:hover {
+  background: #e8e8e8;
+}
+
+.headerTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--coa-dark-blue);
+  line-height: 1.2;
+}
+
+/* ---- Content ---- */
+.content {
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+}
+
+.section {
+  padding: var(--space-sm) 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: var(--space-sm) 0;
+}
+
+/* ---- Place info ---- */
+.placeName {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--coa-dark-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.address {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin-bottom: var(--space-xs);
+}
+
+.distance {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--coa-blue);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ---- Labels ---- */
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--coa-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Cost ---- */
+.costRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.costBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: #f0f0f0;
+  color: var(--coa-dark-gray);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.costDetails {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Hours ---- */
+.hoursValue {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--coa-dark-blue);
+}
+
+/* ---- Badges ---- */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.safeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--coa-light-green);
+  color: var(--coa-compliant-green);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.accessBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: var(--coa-light-blue);
+  color: var(--coa-blue);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.safetyNotes {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- Body text ---- */
+.bodyText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- Directions button ---- */
+.directionsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+  margin-top: var(--space-xl);
+  padding: var(--space-md);
+  background: var(--coa-dark-blue);
+  color: #ffffff;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  min-height: var(--tap-target-min);
+  transition: background 0.15s ease;
+}
+
+.directionsBtn:hover {
+  background: var(--coa-blue);
+}

@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height) - var(--bottom-nav-height));
+  background: var(--coa-faded-white);
+}
+
+/* ---- Messages area ---- */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---- Suggestion chips ---- */
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.suggestionChip {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--coa-blue);
+  background: #ffffff;
+  color: var(--coa-blue);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.suggestionChip:active {
+  transform: scale(0.95);
+  background: var(--coa-light-blue);
+}
+
+/* ---- Input area ---- */
+.inputArea {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  background: #ffffff;
+  border-top: 1px solid var(--color-card-border);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--coa-faded-white);
+  border-radius: var(--radius-full);
+  padding: 4px 4px 4px var(--space-md);
+  border: 2px solid var(--color-card-border);
+  transition: border-color 0.2s ease;
+}
+
+.inputRow:focus-within {
+  border-color: var(--coa-blue);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  outline: none;
+  padding: var(--space-sm) 0;
+  min-height: var(--tap-target-min);
+}
+
+.input::placeholder {
+  color: var(--coa-light-gray);
+}
+
+.micBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--coa-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.sendBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--coa-blue);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
+}
+
+.sendBtn:disabled {
+  background: var(--coa-light-gray);
+  cursor: default;
+  opacity: 0.5;
+}
+
+.sendBtn:not(:disabled):hover {
+  background: var(--coa-dark-blue);
+}
+
+.sendBtn:not(:disabled):active {
+  transform: scale(0.92);
+}

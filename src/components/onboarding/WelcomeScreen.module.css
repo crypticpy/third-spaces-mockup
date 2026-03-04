@@ -1,0 +1,124 @@
+.screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    168deg,
+    var(--coa-faded-white) 0%,
+    #eef0fb 40%,
+    var(--coa-light-blue) 100%
+  );
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  z-index: 1;
+  max-width: 360px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--coa-blue);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-sm);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2xl);
+  line-height: 1.4;
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2xl);
+  backdrop-filter: blur(8px);
+}
+
+.privacy svg {
+  flex-shrink: 0;
+  color: var(--coa-green);
+}
+
+.startButton {
+  width: 100%;
+  max-width: 280px;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--coa-green);
+  color: #ffffff;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+  min-height: var(--tap-target-min);
+  box-shadow: 0 4px 16px rgba(0, 159, 77, 0.3);
+}
+
+.startButton:hover {
+  background: var(--coa-dark-green);
+}
+
+.startButton:active {
+  transform: scale(0.97);
+}
+
+.skipLink {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  color: var(--coa-blue);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  min-height: var(--tap-target-min);
+  display: flex;
+  align-items: center;
+}
+
+.skipLink:hover {
+  color: var(--coa-dark-blue);
+}
+
+.bgDecor {
+  position: absolute;
+  bottom: -120px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 159, 77, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}

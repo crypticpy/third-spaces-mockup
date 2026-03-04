@@ -1,0 +1,49 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+/* Sizes */
+.sm {
+  font-size: var(--font-size-xs);
+  padding: 3px 8px;
+  height: 22px;
+}
+
+.md {
+  font-size: var(--font-size-sm);
+  padding: 4px 12px;
+  height: 28px;
+}
+
+/* Variants */
+.match {
+  background-color: var(--coa-light-green);
+  color: var(--coa-compliant-green);
+}
+
+.reward {
+  background-color: #fff3e0;
+  color: var(--coa-orange);
+}
+
+.cost {
+  background-color: #f0f0f0;
+  color: var(--coa-dark-gray);
+}
+
+.category {
+  background-color: var(--badge-color, var(--coa-blue));
+  color: #ffffff;
+}
+
+.rewardIcon {
+  flex-shrink: 0;
+}
