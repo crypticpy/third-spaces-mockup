@@ -5,7 +5,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <img
-          src="/logos/COA-Logo-Horizontal-Official-RGB.png"
+          src={`${import.meta.env.BASE_URL}logos/COA-Logo-Horizontal-Official-RGB.png`}
           alt="City of Austin"
           className={styles.logo}
         />

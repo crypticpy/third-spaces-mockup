@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
     <div className={styles.screen}>
       <div className={styles.content}>
         <img
-          src="/logos/COA-Logo-Horizontal-Official-RGB.png"
+          src={`${import.meta.env.BASE_URL}logos/COA-Logo-Horizontal-Official-RGB.png`}
           alt="City of Austin"
           className={styles.logo}
         />
